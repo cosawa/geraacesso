@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element audit="true" extends="task" label="GeraAcesso" max_length="40" name="x_407192_gera_aces_geraacesso" type="collection">
         <element attributes="edge_encryption_enabled=true" label="Email" max_length="40" name="u_email_1" type="string"/>
-        <element attributes="edge_encryption_enabled=true" choice="1" default="1" label="Empresa" mandatory="true" max_length="40" name="u_empresa" type="string">
+        <element attributes="edge_encryption_enabled=true" choice="3" default="1" label="Empresa" mandatory="true" max_length="40" name="u_empresa" type="string">
             <choice>
                 <element inactive_on_update="false" label="Prov" sequence="0" value="1"/>
                 <element inactive_on_update="false" label="Wedo" sequence="1" value="2"/>
                 <element inactive_on_update="false" label="Bradesco" sequence="2" value="3"/>
+                <element inactive_on_update="false" label="Outro" sequence="3" value="4"/>
             </choice>
         </element>
         <element attributes="edge_encryption_enabled=true" label="Fim" mandatory="true" max_length="40" name="u_fim_3" type="glide_date_time"/>
         <element attributes="edge_encryption_enabled=true" label="Início" mandatory="true" max_length="40" name="u_inicio_2" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" label="Outro" max_length="40" name="u_outro" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Requisitado Em" max_length="40" name="u_requisitado_em" read_only="true" type="glide_date_time"/>
         <element attributes="encode_utf8=false" label="Requisitado por" max_length="32" name="u_requisitado_por" read_only="true" reference="sys_user" type="reference"/>
     </element>
