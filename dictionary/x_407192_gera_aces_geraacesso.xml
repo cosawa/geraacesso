@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element audit="true" extends="task" label="GeraAcesso" max_length="40" name="x_407192_gera_aces_geraacesso" type="collection">
+        <element attributes="encode_utf8=false" label="Aprovador" mandatory="true" max_length="32" name="u_aprovador" reference="sys_user" type="reference"/>
         <element attributes="edge_encryption_enabled=true" label="Email" max_length="40" name="u_email_1" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="3" default="1" label="Empresa" mandatory="true" max_length="40" name="u_empresa" type="string">
             <choice>

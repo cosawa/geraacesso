@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_407192_gera_aces.PegaEnderecoEmail</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>PegaEnderecoEmail</name>
+        <script><![CDATA[var PegaEnderecoEmail = Class.create();
+PegaEnderecoEmail.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+	pegaEmail: function() {
+		var userRecord = new GlideRecord("sys_user");
+		userRecord.get(this.getParameter('sysparm_userID'));
+		return userRecord.email + '';
+	},
+
+    type: 'PegaEnderecoEmail'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-03 01:31:22</sys_created_on>
+        <sys_id>1716d0812f500010c6c33c96f699b669</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>PegaEnderecoEmail</sys_name>
+        <sys_package display_value="Gera Acesso" source="x_407192_gera_aces">9a4987a82f500010c6c33c96f699b665</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Gera Acesso">9a4987a82f500010c6c33c96f699b665</sys_scope>
+        <sys_update_name>sys_script_include_1716d0812f500010c6c33c96f699b669</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-03 02:03:37</sys_updated_on>
+    </sys_script_include>
+</record_update>
